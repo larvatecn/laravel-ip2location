@@ -1,0 +1,32 @@
+{
+  "name": "larva/laravel-ip2location",
+  "description": "This is a ip2location.",
+  "keywords": [ "laravel", "geoip", "ip2location" ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.3.0",
+    "ext-json": "*",
+    "illuminate/support": "^5.8 || ^6.0 || ^7.0",
+    "ip2location/ip2location-php": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Larva\\Ip2Location\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Larva\\Ip2Location\\Ip2LocationServiceProvider"
+      ],
+      "aliases": {
+        "GeoIP": "Larva\\Ip2Location\\Ip2Location"
+      }
+    }
+  },
+  "prefer-stable": true
+}
